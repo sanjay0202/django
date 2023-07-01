@@ -1,14 +1,50 @@
+#############################################################
 venv
+#############################################################
 python -m venv ./env
 .\env\Scripts\activate.bat
 
+#############################################################
 django
+#############################################################
 
 django-admin help
 django-admin startproject projectname .
+run django project: python manage.py runserver
+create app : python manage.py startapp appname
+once the app is created open yourapp->apps.py copy the functionname and 
+add it into INSTALLED_APPS in yourproject->settings.py as 'appname.apps.functionname'
 
+create urls.py under yourapp
 
+create templates folder in root and add the path into setting.py->TEMPLATES->DIRS
+like DIRS=[os.path.join(BASE_DIR,'templates')]
+
+use {% block content %} {% endblock %} jinja in base html
+use below in other html to extend the template
+{% extends 'base.html' %}
+{% block content %}
+<h1>about</h1>
+{% endblock %}
+
+create a static folder to save all the static elements and 
+add the path in settings.py as 
+STATIC_ROOT = os.path.join(BASE_DIR,'static')
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR,'sanjay/static')
+]
+
+run python manage.py collectstatic to collect all statics into one place(STATIC_ROOT)
+
+django files and folders :
+    __pycache__ : is used to store compiled file , can be deleted but it will appear again when u compile
+    __init__.py : not used
+    settings.py : all application settings(debug,secret_key,db etc.) are stored here.
+    urls.py : all path are saved here(/admin , /home etc.)
+
+#############################################################
 git
+#############################################################
 
 git init
 git configure
@@ -23,4 +59,3 @@ git remote add origin <git repo link>
 git push 
 to create new branch : git checkout -b newbranchname
 to push into new branch : git push -u origin newbranchname
-..
