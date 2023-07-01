@@ -1,0 +1,16 @@
+venv
+python -m venv ./env
+.\env\Scripts\activate.bat
+
+django
+
+django-admin help
+django-admin startproject projectname .
+
+
+git
+
+git init
+git configure
+add all the files that need not to be pushed to git in .gitingore file
+refer gitingore.io to files that needs to be removed for each framework
