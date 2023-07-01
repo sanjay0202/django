@@ -19,4 +19,5 @@ refer gitingore.io to files that needs to be removed for each framework
 git add .
 git commit -m "your message"
 to view git configuration git config --list
-change
+git remote add origin <git repo link>
+git push 
