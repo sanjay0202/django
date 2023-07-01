@@ -12,5 +12,10 @@ git
 
 git init
 git configure
+
 add all the files that need not to be pushed to git in .gitingore file
 refer gitingore.io to files that needs to be removed for each framework
+
+git add .
+git commit -m "your message"
+to view git configuration git config --list
