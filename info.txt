@@ -26,6 +26,11 @@ use below in other html to extend the template
 {% block content %}
 <h1>about</h1>
 {% endblock %}
+to load static use {% load static %} at the top of html
+to use it in html tags use like <link rel="stylesheet" href="{ % static 'css/style.css' %}">
+
+You can create a part of html and save it a folder partials 
+and include in other htmls using {% include 'partials/_topbar.html' %}
 
 create a static folder to save all the static elements and 
 add the path in settings.py as 
@@ -59,3 +64,7 @@ git remote add origin <git repo link>
 git push 
 to create new branch : git checkout -b newbranchname
 to push into new branch : git push -u origin newbranchname
+to merge into a existing branch checkout to the branch to which you want to merge
+ and run : 
+ git checkout master   -------> this will go into master branch
+ git merge dev  -------> this will merge dev into master branch , now master branch will have dev data
