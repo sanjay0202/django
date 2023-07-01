@@ -18,6 +18,9 @@ refer gitingore.io to files that needs to be removed for each framework
 
 git add .
 git commit -m "your message"
-to view git configuration git config --list
+to view git configuration :git config --list
 git remote add origin <git repo link>
 git push 
+to create new branch : git checkout -b newbranchname
+to push into new branch : git push -u origin newbranchname
+..
