@@ -20,18 +20,6 @@ create urls.py under yourapp
 create templates folder in root and add the path into setting.py->TEMPLATES->DIRS
 like DIRS=[os.path.join(BASE_DIR,'templates')]
 
-use {% block content %} {% endblock %} jinja in base html
-use below in other html to extend the template
-{% extends 'base.html' %}
-{% block content %}
-<h1>about</h1>
-{% endblock %}
-to load static use {% load static %} at the top of html
-to use it in html tags use like <link rel="stylesheet" href="{ % static 'css/style.css' %}">
-
-You can create a part of html and save it a folder partials 
-and include in other htmls using {% include 'partials/_topbar.html' %}
-
 create a static folder to save all the static elements and 
 add the path in settings.py as 
 STATIC_ROOT = os.path.join(BASE_DIR,'static')
@@ -46,6 +34,24 @@ django files and folders :
     __init__.py : not used
     settings.py : all application settings(debug,secret_key,db etc.) are stored here.
     urls.py : all path are saved here(/admin , /home etc.)
+
+#############################################################
+jinja
+#############################################################
+use {% block content %} {% endblock %} jinja in base html
+use below in other html to extend the template
+{% extends 'base.html' %}
+{% block content %}
+<h1>about</h1>
+{% endblock %}
+to load static use {% load static %} at the top of html
+to use it in html tags use like <link rel="stylesheet" href="{ % static 'css/style.css' %}">
+
+You can create a part of html and save it a folder partials 
+and include in other htmls using {% include 'partials/_topbar.html' %}
+
+to redirect to other page use <a href="{% url 'index' %}"> make sure
+that the page is added in the apps url.py file like path('', views.index, name='index')
 
 #############################################################
 git
