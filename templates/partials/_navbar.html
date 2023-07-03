@@ -12,12 +12,11 @@
                 <li {% if '/' == request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {% endif%}>
                     <a class="nav-link" href="{% url 'index' %}">Home</a>
                 </li>
-                <li {% if 'about' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3"
-                    {%endif%}>
+                <li {% if 'about' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {%endif%}>
                     <a class="nav-link" href="{% url 'about' %}">About</a>
                 </li>
-                <li class="nav-item mr-3">
-                    <a class="nav-link" href="{% url 'index' %}">Featured Listings</a>
+                <li {% if 'listings' in request.path %} class="nav-item active mr-3" {% else %} class="nav-item mr-3" {%endif%}>
+                    <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
                 </li>
             </ul>
 
@@ -36,14 +35,3 @@
         </div>
     </div>
 </nav>
-
-<section id="showcase-inner" class="py-5 text-white">
-    <div class="container">
-        <div class="row text-center">
-            <div class="col-md-12">
-                <h1 class="display-4">About BT Real Estate</h1>
-                <p class="lead">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sunt, pariatur!</p>
-            </div>
-        </div>
-    </div>
-</section>
