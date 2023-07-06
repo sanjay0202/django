@@ -29,7 +29,14 @@ STATICFILES_DIRS = [
 
 run python manage.py collectstatic to collect all statics into one place(STATIC_ROOT)
 
+Need pillow python package to use imagefield in models
+
 command to migrate db : 'python manage.py migrate'
+command to migrate all models : 'python manage.py makemigrate'
+command to migrate specific models : 'python manage.py makemigrate model_name'
+command to see how the migration sql query will look like (just for info) : 'python manage.py sqlmigrate model_name 0001' 
+where 0001 is migration file that got created when migrate cmd is used
+
 
 django files and folders :
     __pycache__ : is used to store compiled file , can be deleted but it will appear again when u compile
