@@ -37,12 +37,18 @@ command to migrate specific models : 'python manage.py makemigrate model_name'
 command to see how the migration sql query will look like (just for info) : 'python manage.py sqlmigrate model_name 0001' 
 where 0001 is migration file that got created when migrate cmd is used
 
+### register models with admin ### 
+with admin,py of the app 
+from .models import model_class_name
+admin.site.register(model_class_name)
+
 
 django files and folders :
     __pycache__ : is used to store compiled file , can be deleted but it will appear again when u compile
     __init__.py : not used
     settings.py : all application settings(debug,secret_key,db etc.) are stored here.
     urls.py : all path are saved here(/admin , /home etc.)
+django admin login : admin/admin
 
 #############################################################
 jinja
