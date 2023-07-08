@@ -4,9 +4,13 @@ from .models import Listing
 
 def index(request):
     listings = Listing.objects.all()
-    return render(request,'listings/listings.html',listings)
 
-def listing(request):
+    context = {
+        'listings' : listings
+    }
+    return render(request,'listings/listings.html',context)
+
+def listing(request,listing_id):
     return render(request,'listings/listing.html')
 
 def search(request):
