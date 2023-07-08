@@ -30,6 +30,10 @@ STATICFILES_DIRS = [
 run python manage.py collectstatic to collect all statics into one place(STATIC_ROOT)
 
 Need pillow python package to use imagefield in models
+to upload or save any files/images you can create a folder and add its path in settings.py like
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+MEDIA_URL = '/media/'
+
 
 command to migrate db : 'python manage.py migrate'
 command to migrate all models : 'python manage.py makemigrate'
