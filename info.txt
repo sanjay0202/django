@@ -46,6 +46,13 @@ with admin,py of the app
 from .models import model_class_name
 admin.site.register(model_class_name)
 
+To send dynamic data to html you can send from views page , refer to views.py index function in listings app.
+
+
+add 'django.contrib.humanize' under INSTALLED_APPS in settings.py for formating display of dynamic data
+ex : to show number of days {{ listing.list_date | timesince}}
+to show number in price format(ex: 10000 as 10,000) {{ listing.price | intcomma }}
+
 
 django files and folders :
     __pycache__ : is used to store compiled file , can be deleted but it will appear again when u compile
